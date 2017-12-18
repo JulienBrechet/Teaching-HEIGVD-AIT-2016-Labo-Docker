@@ -1,3 +1,5 @@
+In ha :
+cat /usr/local/etc/haproxy/haproxy.cfg
 # Global configuration for HAProxy
 # http://cbonte.github.io/haproxy-dconv/configuration-1.5.html#3
 global

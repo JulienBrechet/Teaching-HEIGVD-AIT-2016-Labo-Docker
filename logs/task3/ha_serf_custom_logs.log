@@ -1,0 +1,8 @@
+In ha :
+cat /var/log/serf.log
+Member join script triggered
+Member join event received from: 3df6038d26bc with role balancer
+Member join script triggered
+Member join event received from: 5e0277a04f77 with role backend
+Member join script triggered
+Member join event received from: 5689f1d9afb5 with role backend

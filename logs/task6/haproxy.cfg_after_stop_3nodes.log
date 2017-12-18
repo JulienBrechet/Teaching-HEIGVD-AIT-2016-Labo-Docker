@@ -1,3 +1,5 @@
+In ha :
+cat /usr/local/etc/haproxy/haproxy.cfg
 # Global configuration for HAProxy
 # http://cbonte.github.io/haproxy-dconv/configuration-1.5.html#3
 global
@@ -107,7 +109,16 @@ backend nodes
     # Define the list of nodes to be in the balancing mechanism
     # http://cbonte.github.io/haproxy-dconv/configuration-1.5.html#4-server
     # HANDLEBARS START
-    # HANDLEBARS END
+
+        server 7bbed089bd18 172.18.0.3:3000 check
+
+        server 8c597cfb6f4f 172.18.0.9:3000 check
+
+        server a2c162f3fa8b 172.18.0.5:3000 check
+
+        server d5e4128b95ef 172.18.0.7:3000 check
+
+        # HANDLEBARS END
 
 # Other links you will need later for this lab
 #

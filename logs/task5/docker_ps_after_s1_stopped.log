@@ -1,0 +1,12 @@
+vagrant@ubuntu-14:~$ docker ps
+CONTAINER ID        IMAGE                  COMMAND             CREATED             STATUS              PORTS                                                                                    NAMES
+cc88972f3b8c        softengheigvd/webapp   "/init"             22 minutes ago      Up 22 minutes       3000/tcp, 7373/tcp, 7946/tcp                                                             s2
+92a4937df62b        softengheigvd/ha       "/init"             27 minutes ago      Up 27 minutes       0.0.0.0:80->80/tcp, 7373/tcp, 0.0.0.0:1936->1936/tcp, 0.0.0.0:9999->9999/tcp, 7946/tcp   ha
+
+=====================================================================================================================================================================================================
+
+vagrant@ubuntu-14:~$ docker ps -a
+CONTAINER ID        IMAGE                  COMMAND             CREATED             STATUS                     PORTS                                                                                    NAMES
+cc88972f3b8c        softengheigvd/webapp   "/init"             23 minutes ago      Up 23 minutes              3000/tcp, 7373/tcp, 7946/tcp                                                             s2
+95f089cc635a        softengheigvd/webapp   "/init"             25 minutes ago      Exited (0) 2 minutes ago                                                                                            s1
+92a4937df62b        softengheigvd/ha       "/init"             28 minutes ago      Up 28 minutes              0.0.0.0:80->80/tcp, 7373/tcp, 0.0.0.0:1936->1936/tcp, 0.0.0.0:9999->9999/tcp, 7946/tcp   ha

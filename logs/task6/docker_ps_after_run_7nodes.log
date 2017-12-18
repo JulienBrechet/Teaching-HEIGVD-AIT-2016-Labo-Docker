@@ -1,0 +1,13 @@
+Note : nous avons oublié d'effectuer un docker ps pendant la procédure de la tâche 6.
+		Nous avons donc dû recommencer la procédure pour pouvoir effectuer la commande docker ps pendant que nous avions 7 nodes actifs.
+		Mais les ID des containers ne correspondent pas à ceux des autres logs de la tâche 6.
+		
+CONTAINER ID        IMAGE                  COMMAND             CREATED             STATUS              PORTS                                                                                    NAMES
+b73da7faab49        softengheigvd/webapp   "/init"             5 seconds ago       Up 3 seconds        3000/tcp, 7373/tcp, 7946/tcp                                                             s7
+74c757471806        softengheigvd/webapp   "/init"             5 seconds ago       Up 4 seconds        3000/tcp, 7373/tcp, 7946/tcp                                                             s6
+270d189bb8d8        softengheigvd/webapp   "/init"             6 seconds ago       Up 5 seconds        3000/tcp, 7373/tcp, 7946/tcp                                                             s5
+9995f1363222        softengheigvd/webapp   "/init"             7 seconds ago       Up 6 seconds        3000/tcp, 7373/tcp, 7946/tcp                                                             s4
+1737aa49bca4        softengheigvd/webapp   "/init"             8 seconds ago       Up 6 seconds        3000/tcp, 7373/tcp, 7946/tcp                                                             s3
+4a548be19c3b        softengheigvd/webapp   "/init"             9 seconds ago       Up 7 seconds        3000/tcp, 7373/tcp, 7946/tcp                                                             s2
+2344766d4ff3        softengheigvd/webapp   "/init"             9 seconds ago       Up 8 seconds        3000/tcp, 7373/tcp, 7946/tcp                                                             s1
+7036d20ab681        softengheigvd/ha       "/init"             38 seconds ago      Up 36 seconds       0.0.0.0:80->80/tcp, 7373/tcp, 0.0.0.0:1936->1936/tcp, 0.0.0.0:9999->9999/tcp, 7946/tcp   ha

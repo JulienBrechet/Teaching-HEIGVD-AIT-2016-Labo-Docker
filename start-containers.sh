@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# Run two webapps
+# Run three webapps
 echo "************************  run webapps  ************************"
 docker rm -f s1 2>/dev/null || true
 docker rm -f s2 2>/dev/null || true

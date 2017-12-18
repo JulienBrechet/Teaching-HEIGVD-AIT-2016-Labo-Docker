@@ -1,0 +1,3 @@
+In ha :
+cat /tmp/haproxy.cfg
+Container cc618f5157dc has joined the Serf cluster with the following IP address: 172.18.0.3
