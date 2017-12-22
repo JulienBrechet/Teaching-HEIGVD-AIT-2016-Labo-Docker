@@ -5,15 +5,28 @@
 #### URL du projet : [https://github.com/JulienBrechet/Teaching-HEIGVD-AIT-2016-Labo-Docker](https://github.com/JulienBrechet/Teaching-HEIGVD-AIT-2016-Labo-Docker)
 
 ## Table des matières
-1.	[Task 0 : Identify issues and install the tools](#T0)
-2.	[Task 1 : Add a process supervisor to run several processes](#T1)
-3.	[Task 2 : Add a tool to manage membership in the web server cluster](#T2)
-4.	[Task 3 : React to membership changes](#T3)
-5.	[Task 4 : Use a template engine to easily generate configuration files](#T4)
-6.	[Task 5 : Generate a new load balancer configuration when membership changes](#T5)
-7.	[Task 6 : Make the load balancer automatically reload the new configuration](#T6)
+1.	[Important !](#Important)
+2.	[Introduction](#Introduction)
+3.	[Task 0 : Identify issues and install the tools](#T0)
+4.	[Task 1 : Add a process supervisor to run several processes](#T1)
+5.	[Task 2 : Add a tool to manage membership in the web server cluster](#T2)
+6.	[Task 3 : React to membership changes](#T3)
+7.	[Task 4 : Use a template engine to easily generate configuration files](#T4)
+8.	[Task 5 : Generate a new load balancer configuration when membership changes](#T5)
+9.	[Task 6 : Make the load balancer automatically reload the new configuration](#T6)
+10.	[Difficultés rencontrées](#Difficultes)
+11.	[Conclusion](#Conclusion)
 
-## Introduction
+
+
+## Important ! <a name="Important"></a>
+Il faut absolument créer notre propre réseau Docker en mode bridge (ici le réseau `heig`). Sinon on ne pourra pas lancer correctement nos containers et utiliser notre architecture de load balancing. La commande à effectuer est la suivante :
+
+	docker network create --driver bridge heig
+
+
+
+## Introduction <a name="Introduction"></a>
 Dans ce laboratoire, on va manipuler un HAProxy et des serveurs nodes à travers des containers Docker. On va devoir utiliser entre autres un superviseur de processus, un template engine et un cluster membership management tool et on va améliorer petit à petit notre architecture afin de la rendre le plus dynamique possible. C'est-à-dire qu'on va ajouter et supprimer dynamiquement les nodes arrivant et sortants dans le mécanisme de load balancing. On va devoir pour cela utiliser les outils précités afin d'automatiser le processus.
 
 
@@ -293,14 +306,15 @@ Selon Wikipedia, un template engine (ou moteur de template en français) est un 
 
 3.	**Present a live demo where you add and remove a backend container.**
 
-	En discussion avec Bastian.
+	Démonstration effectuée le 22.12.2017 en présence de professeur et de l'assistant.
 
-## Difficutés rencontrées
+
+## Difficutés rencontrées <a name="Difficultes"></a>
 
 Ce laboratoire n'a pas été trop difficile car la majeure partie des commandes et des configurations nous ont été données. Mais il nous a pris tout de même un temps considérable à réaliser à cause des nombreuses recherches à effectuer pour répondre aux parties théoriques.
 
 
-## Conclusion
+## Conclusion <a name="Conclusion"></a>
 
 Ce laboratoire a été très intéressant à réaliser. Il nous a permi d'acquérir de nouvelles connaissance dans le domaine des HAProxy et du load balancing en général. Ce laboratoire nous a aussi permi de connaître et d'apprendre à utiliser certains outils tels que *Serf*, *S6* ou *Handlebars*.
 
